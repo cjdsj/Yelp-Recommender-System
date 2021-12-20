@@ -1,0 +1,3 @@
+You should put business_categories.csv, business_topics.csv, user_categories.csv, user_topics.csv, 
+and model.pickle in this folder to run the backend.
+All these files can be got from the codes we provided.
