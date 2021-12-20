@@ -11,6 +11,8 @@ review_data = review_data.drop(columns=['compound'])
 
 user = pd.read_csv('user_topics.csv', index_col=0)
 business = pd.read_csv('business_topics.csv', index_col=0)
+user_categories = pd.read_csv('user_categories.csv')
+business_categories = pd.read_csv('business_categories.csv')
 
 
 ''' 2. Compute topics_similarity '''
@@ -28,9 +30,6 @@ for i in tqdm(range(review_data.shape[0])):
 ''' 3. Compute categories_similarity'''
 review_data['categories_similarity'] = [0 for _ in range(review_data.shape[0])]
 review_data.loc[:, 'categories_similarity'] = review_data.loc[:, 'categories_similarity'].astype('float64')
-
-user_categories = pd.read_csv('user_categories.csv')
-business_categories = pd.read_csv('business_categories.csv')
 
 for i in tqdm(range(review_data.shape[0])):
     user_id, business_id = review_data.loc[i, 'user_id'], review_data.loc[i, 'business_id']
