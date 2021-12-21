@@ -38,22 +38,28 @@ Implement data clean on 'yelp_academic_dataset_user.csv'. It save the preprocess
 ### 4. review_preprocessing.py
 Implement data clean on 'yelp_academic_dataset_review.csv'. It save the preprocessed data as 'review.csv'.
 
-### 5. topics.py
+### 5. LDA.py
+Conduncted LDA by PySpark, save the topics for each review as npy file.
+
+### 6. topics.py
 Use topics given by LDA algorithm for each topic, we can get topics for every users and business. The data will be stored as 
 'user_topics.csv' and 'business_topics.csv'.
 
-### 6. categories.py
+### 7. categories.py
 We can get categories for each business in 'business.csv', then we can aggregate them to get categories for users. The data will be stored as 
 'user_topics.csv' and 'business_topics.csv'.
 
-### 7. final_preprocessing.py
+### 8. sentiment.py
+Use Vadar to get the sentiment of each review and save as 'sentiment.csv'.
+
+### 9. final_preprocessing.py
 Compute category similarity and topic similarity between all users and businesses using cosine similarity. The data will be stored as 
 'final_matrix.csv'.
 
-### 8. train.py
+### 10. train.py
 Train the CF model and save it.
 
-### 9. test.py
+### 11. test.py
 Test the pure CF method and our hybrid method, show metrics for both methods.
 
 ## Website
